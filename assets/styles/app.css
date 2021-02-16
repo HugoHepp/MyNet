@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;900&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar{
+    color: black;
+    font-size: 1.2em;
+}
+
+.navbar-brand{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 900;
+}
+
+.nav-link{
+    color: black;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    .navbar{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .navbar-brand{
+        font-size: 20px;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    .navbar-nav *{
+        padding-left: 15px;
+    }
+    
+    .nav-link{
+        font-size: 10px ;
+        padding: 0;
+        padding-left: 10px;
+    
+    }
+}
+
+
+.badge{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.main-p{
+    font-weight: 900;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron{
+    background-color: white;
+    color: black;
+}
+
+.img-main{
+    margin-left: 10%;
+}
+
+.footer{	position: absolute;
+    top: -9999px;
+    left: -9999px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+    align-items: center;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+        display: block; 
+        text-align: center;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+    tr { 
+        border: 2px solid rgb(114, 114, 114); 
+        margin-bottom: 5px;
+    }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+}
